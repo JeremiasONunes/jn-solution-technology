@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — JN Soluções Tecnológicas
+ * A paleta da marca coincide com tokens nativos do Tailwind:
+ *   #2563EB = blue-600 (ação) · #3B82F6 = blue-500 (interação) · #60A5FA = blue-400 (detalhe)
+ *   #111827 = gray-900 (superfícies) · #94A3B8 = slate-400 (texto secundário)
+ * Apenas o fundo principal e as famílias tipográficas são adicionados.
+ */
+@theme {
+  --color-ink: #080f1e;
+  --color-ink-soft: #0c1527;
+
+  /* Verde do WhatsApp: usado só onde a ação leva ao WhatsApp */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-strong: #1ebe5d;
+  --color-telegram: #26a5e4;
+  --color-telegram-strong: #1e96d1;
+
+  --font-sans: "Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-typing: typing 1.2s ease-in-out infinite;
+
+  @keyframes typing {
+    0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-3px); }
+  }
+
+}
+
+@layer base {
+  /*
+   * Encaixe suave da rolagem: a tela se acomoda no início de seções e cards
+   * (classes snap-start), logo abaixo do header fixo. "proximity" só encaixa
+   * quando a rolagem para perto de um ponto; nunca prende o usuário.
+   */
+  html {
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 4rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (width >= 40rem) {
+    html {
+      scroll-padding-top: 5rem;
+    }
+  }
+
+  body {
+    @apply bg-ink font-sans text-white antialiased;
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-blue-500/40 text-white;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue-400);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Fundo quadriculado, esmaecido nas bordas. A cor da linha pode ser trocada via --grid-color. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-color, rgb(148 163 184 / 0.07)) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color, rgb(148 163 184 / 0.07)) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 100%);
+}
+
+/* Animações apenas para quem não pediu movimento reduzido */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [data-reveal] {
+    transition:
+      opacity 0.7s var(--ease-out-soft),
+      transform 0.7s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal="hidden"] {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
