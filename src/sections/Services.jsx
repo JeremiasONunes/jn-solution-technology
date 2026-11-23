@@ -2,7 +2,6 @@ import Container from "../components/Container";
 import { GlassGlow } from "../components/glass";
 import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
-import SnapPoint from "../components/SnapPoint";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data/services";
 
@@ -13,7 +12,6 @@ export default function Services() {
       aria-labelledby="servicos-title"
       className="relative isolate overflow-hidden py-16 sm:py-20 lg:py-16"
     >
-      <SnapPoint />
       <Container>
         <SectionTitle
           id="servicos-title"
@@ -32,9 +30,7 @@ export default function Services() {
                 as="li"
                 key={service.id}
                 delay={index * 100}
-                className={`max-lg:snap-start max-lg:scroll-mt-4 ${
-                  index === services.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
-                }`}
+                className={index === services.length - 1 ? "md:col-span-2 lg:col-span-1" : undefined}
               >
                 <ServiceCard service={service} />
               </Reveal>

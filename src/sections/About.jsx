@@ -2,7 +2,6 @@ import aboutImage from "../assets/images/sobre-tecnologia.webp";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
-import SnapPoint from "../components/SnapPoint";
 import { pillars, workSteps } from "../data/company";
 
 export default function About() {
@@ -12,7 +11,6 @@ export default function About() {
       aria-labelledby="sobre-title"
       className="relative border-y border-white/[0.05] bg-ink-soft py-16 sm:py-20 lg:py-16"
     >
-      <SnapPoint />
 
       <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
         <div>
@@ -43,7 +41,7 @@ export default function About() {
           </Reveal>
         </div>
 
-        <Reveal delay={120} className="max-lg:snap-start max-lg:scroll-mt-4">
+        <Reveal delay={120}>
           <figure className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-white/[0.08]">
             <img
               src={aboutImage}

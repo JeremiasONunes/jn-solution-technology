@@ -20,7 +20,7 @@ function FooterColumn({ title, children }) {
 
 export default function Footer() {
   return (
-    <footer className="snap-end border-t border-white/[0.06] bg-ink-soft">
+    <footer className="border-t border-white/[0.06] bg-ink-soft">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1.3fr_1fr] lg:gap-8">
         <div className="max-w-xs">
           <Logo />

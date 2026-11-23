@@ -32,13 +32,8 @@
 }
 
 @layer base {
-  /*
-   * Encaixe suave da rolagem: a tela se acomoda no início de seções e cards
-   * (classes snap-start), logo abaixo do header fixo. "proximity" só encaixa
-   * quando a rolagem para perto de um ponto; nunca prende o usuário.
-   */
+  /* Compensa o header fixo ao navegar pelos links do menu. */
   html {
-    scroll-snap-type: y proximity;
     scroll-padding-top: 4rem;
     -webkit-tap-highlight-color: transparent;
   }

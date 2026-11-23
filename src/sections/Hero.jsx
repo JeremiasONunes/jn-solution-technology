@@ -13,7 +13,7 @@ export default function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="relative isolate snap-start border-b border-white/[0.06]"
+      className="relative isolate border-b border-white/[0.06]"
     >
       <div className="absolute inset-0 -z-10 bg-grid" aria-hidden="true" />
 

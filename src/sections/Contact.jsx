@@ -12,7 +12,7 @@ export default function Contact() {
     <section
       id="contato"
       aria-labelledby="contato-title"
-      className="relative isolate snap-start scroll-mt-6 overflow-x-clip pb-16 sm:scroll-mt-10 sm:pb-20"
+      className="relative isolate scroll-mt-6 overflow-x-clip pb-16 sm:scroll-mt-10 sm:pb-20"
     >
       <Container>
         <Reveal className="relative">

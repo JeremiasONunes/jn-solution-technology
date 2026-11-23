@@ -2,13 +2,11 @@ import BenefitCard from "../components/BenefitCard";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
-import SnapPoint from "../components/SnapPoint";
 import { benefits } from "../data/company";
 
 export default function Benefits() {
   return (
     <section id="diferenciais" aria-labelledby="diferenciais-title" className="relative py-16 sm:py-20">
-      <SnapPoint />
       <Container>
         <SectionTitle
           id="diferenciais-title"
