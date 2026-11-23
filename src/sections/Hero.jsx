@@ -30,7 +30,7 @@ export default function Hero() {
 
           <Reveal delay={100}>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-400">
-              Da manutenção do seu computador ao desenvolvimento de sistemas para sua empresa. A JN
+              Da manutenção do seu computador ao desenvolvimento de sistemas para sua empresa. A JNunes Tech Soluções
               conecta conhecimento técnico a soluções que funcionam.
             </p>
           </Reveal>

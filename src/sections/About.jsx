@@ -21,7 +21,7 @@ export default function About() {
 
           <Reveal delay={100} className="mt-6 space-y-5 text-base leading-relaxed text-slate-400 sm:text-lg">
             <p>
-              A <strong className="font-semibold text-white">JNunes Tech Tecnológicas</strong> nasceu
+              A <strong className="font-semibold text-white">JNunes Tech Soluções</strong> nasceu
               para aproximar pessoas e empresas de soluções tecnológicas práticas e eficientes.
             </p>
             <p>
