@@ -124,3 +124,17 @@ A paleta da marca coincide com tokens nativos do Tailwind, então as classes pad
 4. Clique em **Deploy**.
 
 O [`vercel.json`](vercel.json) já define build e saída, cache de longo prazo para `/assets` (arquivos com hash) e cabeçalhos básicos de segurança. Também é possível publicar pela CLI com `npx vercel` na raiz do projeto.
+
+## Domínio e Google
+
+Domínio principal: **https://jnsolucoestecnologicas.com.br** (sem www; o www redireciona para ele).
+
+O código já inclui: URL canônica, Open Graph com imagem de prévia (`public/og-image.jpg`), dados estruturados (JSON-LD) no `index.html`, `public/robots.txt` e `public/sitemap.xml`. Se o domínio mudar, atualize esses quatro lugares.
+
+**Vercel:** Project → Settings → Domains → adicionar `jnsolucoestecnologicas.com.br` e `www.jnsolucoestecnologicas.com.br`, configurando o www para redirecionar ao domínio sem www.
+
+**Hostinger (DNS):** Domínios → DNS / Nameservers → remover os registros A/AAAA/CNAME padrão de `@` e `www` e criar os que a Vercel indicar (normalmente `A @ 76.76.21.21` e `CNAME www cname.vercel-dns.com`).
+
+**Google Search Console:** adicionar propriedade do tipo *Domínio*, verificar com o registro TXT na Hostinger e enviar `sitemap.xml` em Sitemaps. Depois, em Inspeção de URL, solicitar a indexação da página inicial.
+
+Ao publicar mudanças relevantes de conteúdo, atualize o `<lastmod>` do `sitemap.xml`.

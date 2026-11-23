@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jnsolucoestecnologicas.com.br/sitemap.xml
