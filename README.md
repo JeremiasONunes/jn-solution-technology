@@ -123,4 +123,4 @@ A paleta da marca coincide com tokens nativos do Tailwind, então as classes pad
    - Output directory: `dist`
 4. Clique em **Deploy**.
 
-Não é preciso `vercel.json`: o site é uma página única e estática. Também é possível publicar pela CLI com `npx vercel` na raiz do projeto.
+O [`vercel.json`](vercel.json) já define build e saída, cache de longo prazo para `/assets` (arquivos com hash) e cabeçalhos básicos de segurança. Também é possível publicar pela CLI com `npx vercel` na raiz do projeto.
