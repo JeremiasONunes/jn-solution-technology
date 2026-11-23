@@ -4,7 +4,7 @@
  * `email` e `location` são opcionais: quando preenchidos, aparecem no rodapé.
  */
 export const siteConfig = {
-  name: "JNunes Tech Tecnológicas",
+  name: "JNunes Tech Soluções",
   description:
     "Infraestrutura de TI e desenvolvimento de soluções digitais para pessoas e empresas.",
   whatsapp: "5535998500813",
