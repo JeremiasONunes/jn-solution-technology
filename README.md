@@ -1,6 +1,6 @@
-# JN Soluções Tecnológicas — Landing Page
+# JNunes Tech Tecnológicas — Landing Page
 
-Landing page institucional da **JN Soluções Tecnológicas**: infraestrutura de TI, suporte técnico e desenvolvimento de soluções digitais. Frontend estático, com o WhatsApp como canal principal de conversão.
+Landing page institucional da **JNunes Tech Tecnológicas**: infraestrutura de TI, suporte técnico e desenvolvimento de soluções digitais. Frontend estático, com o WhatsApp como canal principal de conversão.
 
 ## Stack
 

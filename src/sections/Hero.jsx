@@ -70,7 +70,7 @@ export default function Hero() {
               height="572"
               fetchPriority="high"
               decoding="async"
-              alt="Técnico da JN Soluções Tecnológicas instalando componentes em um computador, em bancada com ferramentas, memórias e SSDs"
+              alt="Técnico da JNunes Tech Tecnológicas instalando componentes em um computador, em bancada com ferramentas, memórias e SSDs"
               className="size-full object-cover"
             />
             {/* degradê integra a foto ao fundo escuro */}

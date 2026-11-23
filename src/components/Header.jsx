@@ -56,7 +56,7 @@ export default function Header() {
       </a>
 
       <Container className="flex h-16 items-center justify-between gap-6 sm:h-20">
-        <a href="#inicio" aria-label="JN Soluções Tecnológicas — voltar ao início" onClick={closeMenu}>
+        <a href="#inicio" aria-label="JNunes Tech Soluções — voltar ao início" onClick={closeMenu}>
           <Logo />
         </a>
 

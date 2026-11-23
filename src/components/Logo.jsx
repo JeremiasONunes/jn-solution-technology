@@ -27,9 +27,9 @@ export default function Logo({ className = "" }) {
       <LogoMark />
       <span className="flex flex-col leading-none">
         <span className="font-display text-lg font-bold tracking-[-0.01em] text-white">
-          JN Soluções
+          JNunes Tech
         </span>
-        <span className="mt-1 text-[13px] text-slate-400">Tecnológicas</span>
+        <span className="mt-1 text-[13px] text-slate-400">Soluções</span>
       </span>
     </span>
   );
