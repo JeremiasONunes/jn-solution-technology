@@ -40,7 +40,7 @@ export default function ChatWindow({ id, open, onClose, chat }) {
       aria-labelledby={`${id}-titulo`}
       tabIndex={-1}
       inert={!open}
-      className={`fixed inset-x-3 bottom-[calc(max(1rem,env(safe-area-inset-bottom))+5rem)] z-40 flex h-[min(36rem,calc(100svh-10.5rem))] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-white/10 bg-gray-900/95 shadow-2xl shadow-black/60 backdrop-blur-xl transition duration-200 ease-out outline-none sm:inset-x-auto sm:right-6 sm:bottom-28 sm:w-[24rem] ${
+      className={`fixed inset-x-3 bottom-[calc(max(1rem,env(safe-area-inset-bottom))+5rem)] z-40 flex h-[min(36rem,calc(100svh-11.5rem-env(safe-area-inset-bottom)))] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-white/10 bg-gray-900/95 shadow-2xl shadow-black/60 backdrop-blur-xl transition duration-200 ease-out outline-none sm:inset-x-auto sm:right-6 sm:bottom-28 sm:h-[min(36rem,calc(100svh-13rem))] sm:w-[24rem] ${
         open ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-3 scale-95 opacity-0"
       }`}
     >
