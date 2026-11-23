@@ -11,7 +11,7 @@ export default function Benefits() {
         <SectionTitle
           id="diferenciais-title"
           align="center"
-          title="Por que escolher a JN?"
+          title="Por que escolher a JNunes?"
           description="Atendimento próximo, orientação honesta e capacidade técnica para cuidar do que você precisa."
         />
 
