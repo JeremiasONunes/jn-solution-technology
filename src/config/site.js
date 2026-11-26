@@ -4,7 +4,7 @@
  * `email` e `location` são opcionais: quando preenchidos, aparecem no rodapé.
  */
 export const siteConfig = {
-  name: "JNunes Tech Soluções",
+  name: "JNunes Tech Solution",
   description:
     "Infraestrutura de TI e desenvolvimento de soluções digitais para pessoas e empresas.",
   whatsapp: "5535998500813",
@@ -27,12 +27,12 @@ export const communityLinks = {
 
 export const whatsappMessages = {
   general:
-    "Olá! Acessei o site da JNunes Tech Tecnológicas e gostaria de conhecer melhor os serviços.",
+    "Olá! Acessei o site da JNunes Tech Solution e gostaria de conhecer melhor os serviços.",
   maintenance: "Olá! Gostaria de solicitar um atendimento para manutenção de computador.",
   infrastructure:
     "Olá! Gostaria de conversar sobre uma necessidade de infraestrutura de TI para minha empresa.",
   development: "Olá! Tenho interesse no desenvolvimento de um site ou sistema para minha empresa.",
-  quote: "Olá! Gostaria de solicitar um orçamento com a JNunes Tech Tecnológicas.",
+  quote: "Olá! Gostaria de solicitar um orçamento com a JNunes Tech Solution.",
 };
 
 export const navLinks = [
