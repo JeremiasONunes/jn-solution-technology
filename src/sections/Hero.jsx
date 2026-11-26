@@ -26,16 +26,9 @@ export default function Hero() {
       >
         <div>
           <Reveal>
-            <p className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3.5 py-1.5 text-sm font-medium text-blue-700">
-              <span className="size-1.5 rounded-full bg-blue-600" aria-hidden="true" />
-              Suporte técnico &amp; Desenvolvimento
-            </p>
-          </Reveal>
-
-          <Reveal delay={60}>
             <h1
               id="hero-title"
-              className="mt-6 max-w-[34rem] text-[2.35rem] leading-[1.08] font-bold tracking-[-0.02em] text-slate-900 sm:text-5xl xl:text-[3.25rem]"
+              className="max-w-[34rem] text-[2.35rem] leading-[1.08] font-bold tracking-[-0.02em] text-slate-900 sm:text-5xl xl:text-[3.25rem]"
             >
               Tecnologia <span className="text-blue-600">que resolve</span>. Soluções que{" "}
               <span className="text-blue-600">fazem avançar</span>.
