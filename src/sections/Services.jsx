@@ -22,7 +22,7 @@ export default function Services() {
         <div className="relative mt-10">
           {/* luzes em degradê que o vidro dos cards desfoca */}
           <GlassGlow className="top-1/4 -left-24 size-[26rem]" />
-          <GlassGlow tone="sky" className="-right-24 bottom-0 size-[22rem]" />
+          <GlassGlow tone="lavender" className="-right-24 bottom-0 size-[22rem]" />
 
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (

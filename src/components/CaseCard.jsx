@@ -7,14 +7,14 @@ import WhatsAppLink from "./WhatsAppLink";
 /** Moldura de navegador que exibe a captura do projeto. */
 function BrowserFrame({ url, image }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-white/10 bg-gray-900 shadow-2xl shadow-black/50">
-      <div className="flex items-center gap-3 border-b border-white/[0.06] px-3.5 py-2.5">
+    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10">
+      <div className="flex items-center gap-3 border-b border-slate-200/80 px-3.5 py-2.5">
         <span className="flex gap-1.5" aria-hidden="true">
-          <span className="size-2.5 rounded-full bg-white/15" />
-          <span className="size-2.5 rounded-full bg-white/15" />
-          <span className="size-2.5 rounded-full bg-white/15" />
+          <span className="size-2.5 rounded-full bg-slate-300" />
+          <span className="size-2.5 rounded-full bg-slate-300" />
+          <span className="size-2.5 rounded-full bg-slate-300" />
         </span>
-        <span className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md bg-white/[0.05] px-3 py-1 text-[11px] text-slate-400">
+        <span className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md bg-white px-3 py-1 text-[11px] text-slate-600">
           <Lock className="size-3 shrink-0" aria-hidden="true" />
           <span className="truncate">{url}</span>
         </span>
@@ -42,13 +42,13 @@ export default function CaseCard({ item, reversed = false }) {
   return (
     <article
       aria-labelledby={`${id}-title`}
-      className={`relative isolate grid grid-cols-1 items-center gap-10 overflow-hidden rounded-3xl border border-white/[0.08] bg-gray-900/60 p-5 sm:p-8 lg:gap-12 lg:p-10 ${
+      className={`relative isolate grid grid-cols-1 items-center gap-10 overflow-hidden rounded-3xl border border-slate-200/80 bg-white/70 p-5 sm:p-8 lg:gap-12 lg:p-10 ${
         reversed ? "lg:grid-cols-[1fr_1.3fr]" : "lg:grid-cols-[1.3fr_1fr]"
       }`}
     >
       {/* luz em degradê atrás da captura */}
       <div
-        className={`pointer-events-none absolute -bottom-24 -z-10 size-[28rem] rounded-full bg-linear-to-tr from-blue-600/30 to-sky-400/10 blur-[100px] ${
+        className={`pointer-events-none absolute -bottom-24 -z-10 size-[28rem] rounded-full bg-linear-to-tr from-sky-200/70 to-indigo-100/60 blur-[100px] ${
           reversed ? "-right-16" : "-left-16"
         }`}
         aria-hidden="true"
@@ -59,22 +59,22 @@ export default function CaseCard({ item, reversed = false }) {
       </div>
 
       <div>
-        <p className="text-sm font-semibold text-blue-400">{category}</p>
-        <h3 id={`${id}-title`} className="mt-3 text-3xl font-bold tracking-[-0.01em] text-white sm:text-4xl">
+        <p className="text-sm font-semibold text-blue-600">{category}</p>
+        <h3 id={`${id}-title`} className="mt-3 text-3xl font-bold tracking-[-0.01em] text-slate-900 sm:text-4xl">
           {name}
         </h3>
         <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tipo de projeto">
           {tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-slate-300"
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700"
             >
               {tag}
             </li>
           ))}
         </ul>
 
-        <p className="mt-6 leading-relaxed text-slate-400">{description}</p>
+        <p className="mt-6 leading-relaxed text-slate-600">{description}</p>
 
         <ul className="mt-6 space-y-3">
           {highlights.map((highlight) => (

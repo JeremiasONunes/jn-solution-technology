@@ -1,7 +1,9 @@
 import {
+  Building2,
   Code2,
   HeartHandshake,
   Layers,
+  MessageCircle,
   ServerCog,
   ShieldCheck,
   SlidersHorizontal,
@@ -9,9 +11,9 @@ import {
 
 /** Escopo de atuação exibido no Hero (sem números inventados). */
 export const heroHighlights = [
-  "Atendimento residencial e empresarial",
-  "Suporte técnico e desenvolvimento",
-  "Contato direto pelo WhatsApp",
+  { icon: Building2, label: "Atendimento residencial e empresarial" },
+  { icon: Layers, label: "Suporte técnico e desenvolvimento" },
+  { icon: MessageCircle, label: "Contato direto pelo WhatsApp" },
 ];
 
 export const pillars = [

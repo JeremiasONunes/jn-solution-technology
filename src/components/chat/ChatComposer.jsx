@@ -5,8 +5,8 @@ import WhatsAppIcon from "../icons/WhatsAppIcon";
 import WhatsAppLink from "../WhatsAppLink";
 
 const fieldClass =
-  "w-full resize-none rounded-xl border bg-ink/60 px-4 py-3 text-[15px] text-white placeholder:text-slate-500 " +
-  "transition-colors focus:border-blue-500/60 focus:outline-none disabled:opacity-50";
+  "w-full resize-none rounded-xl border bg-white px-4 py-3 text-[15px] text-slate-900 placeholder:text-slate-600 " +
+  "transition-colors focus:border-blue-500 focus:outline-none disabled:opacity-50";
 
 /** Campo de texto para as etapas "nome" e "descrição", com validação inline. */
 function TextComposer({ step, lead, disabled, focusRef, onSubmit }) {
@@ -43,7 +43,7 @@ function TextComposer({ step, lead, disabled, focusRef, onSubmit }) {
     maxLength: max,
     "aria-invalid": Boolean(error),
     "aria-describedby": error ? errorId : undefined,
-    className: `${fieldClass} ${error ? "border-rose-400/60" : "border-white/10"}`,
+    className: `${fieldClass} ${error ? "border-rose-400" : "border-slate-200"}`,
   };
 
   return (
@@ -69,13 +69,13 @@ function TextComposer({ step, lead, disabled, focusRef, onSubmit }) {
           type="submit"
           disabled={disabled}
           aria-label="Enviar resposta"
-          className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white transition hover:bg-blue-500 active:scale-95 disabled:opacity-50"
+          className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white transition hover:bg-blue-700 active:scale-95 disabled:opacity-50"
         >
           <SendHorizontal className="size-5" aria-hidden="true" />
         </button>
       </div>
       <div className="mt-1.5 flex min-h-5 justify-between gap-3 text-xs">
-        <span id={errorId} role="alert" className="text-rose-300">
+        <span id={errorId} role="alert" className="text-rose-600">
           {error}
         </span>
         {!isName && (
@@ -99,9 +99,9 @@ function NeedOptions({ disabled, focusRef, onSelect }) {
             ref={index === 0 ? focusRef : undefined}
             type="button"
             onClick={() => onSelect(id)}
-            className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 text-left text-[13px] leading-snug font-medium text-slate-200 transition hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-white active:scale-[0.98]"
+            className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-3 py-3 text-left text-[13px] leading-snug font-medium text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-slate-900 active:scale-[0.98]"
           >
-            <Icon className="size-4 shrink-0 text-blue-400" aria-hidden="true" />
+            <Icon className="size-4 shrink-0 text-blue-600" aria-hidden="true" />
             {label}
           </button>
         ))}
@@ -125,7 +125,7 @@ function SendActions({ step, lead, focusRef, onSent, onReset }) {
       <button
         type="button"
         onClick={onReset}
-        className="flex h-10 w-full items-center justify-center gap-2 rounded-xl text-sm font-medium text-slate-400 transition-colors hover:bg-white/[0.04] hover:text-white"
+        className="flex h-10 w-full items-center justify-center gap-2 rounded-xl text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900"
       >
         <RotateCcw className="size-4" aria-hidden="true" />
         Recomeçar conversa

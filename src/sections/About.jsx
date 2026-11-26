@@ -9,7 +9,7 @@ export default function About() {
     <section
       id="sobre"
       aria-labelledby="sobre-title"
-      className="relative border-y border-white/[0.05] bg-ink-soft py-16 sm:py-20 lg:py-16"
+      className="relative border-y border-slate-200/80 bg-white py-16 sm:py-20 lg:py-16"
     >
 
       <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
@@ -19,9 +19,9 @@ export default function About() {
             title="Mais do que tecnologia. Parceria para evoluir."
           />
 
-          <Reveal delay={100} className="mt-6 space-y-5 text-base leading-relaxed text-slate-400 sm:text-lg">
+          <Reveal delay={100} className="mt-6 space-y-5 text-base leading-relaxed text-slate-600 sm:text-lg">
             <p>
-              A <strong className="font-semibold text-white">JNunes Tech Soluções</strong> nasceu
+              A <strong className="font-semibold text-slate-900">JNunes Tech Soluções</strong> nasceu
               para aproximar pessoas e empresas de soluções tecnológicas práticas e eficientes.
             </p>
             <p>
@@ -32,17 +32,17 @@ export default function About() {
 
           <Reveal delay={180} as="ul" className="mt-10 grid gap-4 sm:grid-cols-2">
             {pillars.map(({ icon: Icon, title, description }) => (
-              <li key={title} className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5">
-                <Icon className="size-6 text-blue-400" strokeWidth={1.75} aria-hidden="true" />
-                <h3 className="mt-4 font-bold text-white">{title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-slate-400">{description}</p>
+              <li key={title} className="rounded-2xl border border-slate-200/80 bg-white p-5">
+                <Icon className="size-6 text-blue-600" strokeWidth={1.75} aria-hidden="true" />
+                <h3 className="mt-4 font-bold text-slate-900">{title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{description}</p>
               </li>
             ))}
           </Reveal>
         </div>
 
         <Reveal delay={120}>
-          <figure className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-white/[0.08]">
+          <figure className="relative aspect-[16/9] overflow-hidden rounded-[20px] border-4 border-white shadow-[0_20px_25px_-5px_rgb(15_23_42/0.08)] ring-1 ring-slate-200/70">
             <img
               src={aboutImage}
               width="437"
@@ -52,19 +52,14 @@ export default function About() {
               alt="Profissional trabalhando em um notebook, com elementos gráficos de tecnologia sobrepostos"
               className="size-full object-cover"
             />
-            {/* degradê integra a foto ao fundo escuro */}
-            <div
-              className="absolute inset-0 bg-linear-to-t from-ink via-ink/20 to-blue-600/15"
-              aria-hidden="true"
-            />
           </figure>
 
           {/* Cartão sobreposto à base da foto */}
-          <div className="relative mx-3 -mt-16 rounded-3xl border border-white/[0.08] bg-gray-900 p-6 sm:mx-6 sm:-mt-20 sm:p-7">
-            <h3 className="text-sm font-semibold text-blue-400">
+          <div className="relative mx-3 -mt-16 rounded-3xl border border-slate-200/80 bg-white p-6 sm:mx-6 sm:-mt-20 sm:p-7">
+            <h3 className="text-sm font-semibold text-blue-600">
               Nosso compromisso
             </h3>
-            <p className="mt-3 font-display text-xl leading-snug font-bold text-white">
+            <p className="mt-3 font-display text-xl leading-snug font-bold text-slate-900">
               Entender cada cenário, propor caminhos viáveis e entregar soluções com clareza,
               responsabilidade e atenção aos detalhes.
             </p>
@@ -74,16 +69,16 @@ export default function About() {
                 <li key={title} className="relative flex gap-5">
                   {index < workSteps.length - 1 && (
                     <span
-                      className="absolute top-11 bottom-[-1rem] left-[1.1875rem] w-px bg-white/10"
+                      className="absolute top-11 bottom-[-1rem] left-[1.1875rem] w-px bg-slate-100"
                       aria-hidden="true"
                     />
                   )}
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/10 font-display text-sm font-bold text-blue-300 tabular-nums">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 font-display text-sm font-bold text-blue-600 tabular-nums">
                     {index + 1}
                   </span>
                   <div>
-                    <h4 className="font-bold text-white">{title}</h4>
-                    <p className="mt-1 text-[15px] leading-relaxed text-slate-400">{description}</p>
+                    <h4 className="font-bold text-slate-900">{title}</h4>
+                    <p className="mt-1 text-[15px] leading-relaxed text-slate-600">{description}</p>
                   </div>
                 </li>
               ))}

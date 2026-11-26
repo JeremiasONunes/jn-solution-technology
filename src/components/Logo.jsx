@@ -14,10 +14,10 @@ export default function Logo({ className = "" }) {
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <LogoMark />
       <span className="flex flex-col leading-none">
-        <span className="font-display text-lg font-bold tracking-[-0.01em] text-white">
+        <span className="font-display text-lg font-bold tracking-[-0.01em] text-slate-900">
           JNunes Tech
         </span>
-        <span className="mt-1 text-[13px] text-slate-400">Soluções</span>
+        <span className="mt-1 text-[13px] text-slate-600">Soluções</span>
       </span>
     </span>
   );

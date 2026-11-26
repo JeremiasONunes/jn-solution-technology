@@ -1,28 +1,29 @@
 /**
- * Superfície de vidro (glassmorphism) padrão da landing page.
- * Precisa de algo colorido atrás (luzes em degradê) para o desfoque aparecer.
+ * Superfície de vidro (glassmorphism) clara, padrão da landing page.
+ * Fica sobre as luzes suaves (GlassGlow), que aparecem desfocadas através dela.
  */
 export const glassPanel =
-  "relative isolate overflow-hidden border border-white/10 bg-white/[0.04] backdrop-blur-xl " +
-  "shadow-[inset_0_1px_0_0_rgb(255_255_255/0.08),0_24px_48px_-24px_rgb(0_0_0/0.7)]";
+  "relative isolate overflow-hidden border border-white/80 bg-white/70 backdrop-blur-xl " +
+  "ring-1 ring-slate-200/70 shadow-[0_20px_25px_-5px_rgb(15_23_42/0.08),0_8px_10px_-6px_rgb(15_23_42/0.04)]";
 
 /** Reflexo de luz na borda superior do vidro. */
 export function GlassSheen() {
   return (
     <span
-      className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-white/40 to-transparent"
+      className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-white to-transparent"
       aria-hidden="true"
     />
   );
 }
 
+// Iluminação ambiente: azul-celeste (#E0F2FE) com um toque de lavanda (#EEF2FF)
 const glowTones = {
-  blue: "from-blue-600/30 to-sky-400/10",
-  sky: "from-sky-500/25 to-blue-600/10",
+  sky: "from-sky-200/70 to-indigo-100/60",
+  lavender: "from-indigo-100/80 to-sky-100/60",
 };
 
-/** Luz azul em degradê para colocar atrás de painéis de vidro (posição/tamanho via className). */
-export function GlassGlow({ tone = "blue", className = "" }) {
+/** Luz difusa em degradê para colocar atrás de painéis (posição/tamanho via className). */
+export function GlassGlow({ tone = "sky", className = "" }) {
   return (
     <div
       className={`pointer-events-none absolute -z-10 rounded-full bg-linear-to-tr ${glowTones[tone]} blur-[90px] ${className}`}

@@ -13,13 +13,13 @@ export default function SectionTitle({ title, description, id, align = "left" })
     >
       <h2
         id={id}
-        className="shrink-0 text-3xl leading-tight font-bold tracking-[-0.01em] text-white sm:text-4xl lg:max-w-xl lg:text-[2.6rem]"
+        className="shrink-0 text-3xl leading-tight font-bold tracking-[-0.01em] text-slate-900 sm:text-4xl lg:max-w-xl lg:text-[2.6rem]"
       >
         {title}
       </h2>
       {description && (
         <p
-          className={`mt-5 text-base leading-relaxed text-slate-400 sm:text-lg ${
+          className={`mt-5 text-base leading-relaxed text-slate-600 sm:text-lg ${
             centered ? "" : "lg:mt-0 lg:max-w-md"
           }`}
         >

@@ -43,19 +43,19 @@ export default function Offers() {
             <GlassSheen />
             <div>
               {!launched && (
-                <span className="inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">
+                <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-600">
                   Em breve
                 </span>
               )}
               <h2
                 id="ofertas-title"
-                className={`text-2xl leading-tight font-bold tracking-[-0.01em] text-white sm:text-[1.75rem] ${
+                className={`text-2xl leading-tight font-bold tracking-[-0.01em] text-slate-900 sm:text-[1.75rem] ${
                   launched ? "" : "mt-4"
                 }`}
               >
                 Ofertas com ótimo preço, direto no seu celular.
               </h2>
-              <p className="mt-3 max-w-xl leading-relaxed text-slate-400">
+              <p className="mt-3 max-w-xl leading-relaxed text-slate-600">
                 {launched
                   ? "Entre no nosso grupo e receba promoções de produtos selecionados. É gratuito e você sai quando quiser."
                   : "Estamos preparando grupos de ofertas no WhatsApp e no Telegram para você receber promoções de produtos selecionados. Em breve por aqui."}
@@ -76,7 +76,7 @@ export default function Offers() {
                   ) : (
                     <span
                       aria-disabled="true"
-                      className={`${channelClass} cursor-not-allowed border border-white/10 bg-white/[0.03] text-slate-400`}
+                      className={`${channelClass} cursor-not-allowed border border-slate-200 bg-white text-slate-600`}
                     >
                       <Icon className={`size-5 opacity-60 ${iconClass}`} />
                       Grupo no {name}

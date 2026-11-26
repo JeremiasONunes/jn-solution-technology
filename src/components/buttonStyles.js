@@ -1,12 +1,18 @@
 const base =
   "inline-flex items-center justify-center gap-2 rounded-xl font-semibold whitespace-nowrap " +
-  "transition duration-200 ease-out active:scale-[0.98] focus-visible:outline-offset-4";
+  "transition duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] " +
+  "focus-visible:outline-offset-4";
 
 const variants = {
+  // Ação principal: azul calmo com sombra difusa da mesma cor
   primary:
-    "bg-blue-600 text-white shadow-lg shadow-blue-600/25 hover:bg-blue-500 hover:shadow-blue-500/35",
+    "bg-blue-600 text-white shadow-lg shadow-blue-600/25 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30",
+  // Ação secundária: superfície branca com borda suave
   secondary:
-    "border border-white/10 bg-white/[0.03] text-white hover:border-white/20 hover:bg-white/[0.07]",
+    "border border-slate-200 bg-white text-slate-800 shadow-sm shadow-slate-900/5 hover:border-slate-300 hover:shadow-md",
+  // Contorno fino: CTA discreto (header), não compete com a ação principal
+  outline:
+    "border border-blue-600/30 bg-white/60 text-blue-700 hover:border-blue-600/60 hover:bg-blue-50",
 };
 
 const sizes = {

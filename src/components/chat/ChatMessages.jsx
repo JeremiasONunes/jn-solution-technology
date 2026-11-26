@@ -3,7 +3,7 @@ import ChatSummary from "./ChatSummary";
 
 function TypingIndicator() {
   return (
-    <div className="flex w-fit items-center gap-1 rounded-2xl rounded-tl-md bg-gray-800/80 px-4 py-3.5">
+    <div className="flex w-fit items-center gap-1 rounded-2xl rounded-tl-md bg-slate-100 px-4 py-3.5">
       <span className="sr-only">O assistente está digitando…</span>
       {[0, 150, 300].map((delay) => (
         <span
@@ -44,7 +44,7 @@ export default function ChatMessages({ messages, typing, lead }) {
             className={`w-fit max-w-[85%] rounded-2xl px-4 py-2.5 text-[14.5px] leading-relaxed break-words whitespace-pre-line ${
               message.from === "user"
                 ? "ml-auto rounded-tr-md bg-blue-600 text-white"
-                : "rounded-tl-md bg-gray-800/80 text-slate-200"
+                : "rounded-tl-md bg-slate-100 text-slate-700"
             }`}
           >
             <span className="sr-only">{message.from === "user" ? "Você: " : "Assistente: "}</span>

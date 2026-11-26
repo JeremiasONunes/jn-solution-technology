@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 /*
- * Design tokens — JNunes Tech Tecnológicas
- * A paleta da marca coincide com tokens nativos do Tailwind:
- *   #2563EB = blue-600 (ação) · #3B82F6 = blue-500 (interação) · #60A5FA = blue-400 (detalhe)
- *   #111827 = gray-900 (superfícies) · #94A3B8 = slate-400 (texto secundário)
- * Apenas o fundo principal e as famílias tipográficas são adicionados.
+ * Design tokens — JNunes Tech · estética "Soft Tech" (tema claro acolhedor)
+ *   Fundo da página  #F6F8FB  (--color-canvas): branco azulado, reduz o brilho da tela
+ *   Texto principal  #1E293B  (slate-800) · títulos slate-900 · texto secundário slate-600
+ *   Ação / destaque  #2563EB  (blue-600)
+ *   Luz ambiente     #E0F2FE  (sky-100) + #EEF2FF (indigo-50), sempre difusa
  */
 @theme {
-  --color-ink: #080f1e;
-  --color-ink-soft: #0c1527;
+  --color-canvas: #f6f8fb;
+  --color-ink: #0f172a;
 
-  /* Verde do WhatsApp: usado só onde a ação leva ao WhatsApp */
-  --color-whatsapp: #25d366;
-  --color-whatsapp-strong: #1ebe5d;
+  /* Canais externos: usados só onde a ação leva a eles */
+  --color-whatsapp: #1fb35c;
+  --color-whatsapp-strong: #189b4e;
   --color-telegram: #26a5e4;
   --color-telegram-strong: #1e96d1;
 
@@ -28,7 +28,6 @@
     0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
     30% { opacity: 1; transform: translateY(-3px); }
   }
-
 }
 
 @layer base {
@@ -45,7 +44,7 @@
   }
 
   body {
-    @apply bg-ink font-sans text-white antialiased;
+    @apply bg-canvas font-sans text-slate-800 antialiased;
     overflow-x: clip;
     text-rendering: optimizeLegibility;
   }
@@ -60,11 +59,11 @@
   }
 
   ::selection {
-    @apply bg-blue-500/40 text-white;
+    @apply bg-blue-100 text-slate-900;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-blue-400);
+    outline: 2px solid var(--color-blue-600);
     outline-offset: 3px;
     border-radius: 0.5rem;
   }
@@ -73,8 +72,8 @@
 /* Fundo quadriculado, esmaecido nas bordas. A cor da linha pode ser trocada via --grid-color. */
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, var(--grid-color, rgb(148 163 184 / 0.07)) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-color, rgb(148 163 184 / 0.07)) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-color, rgb(15 23 42 / 0.045)) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color, rgb(15 23 42 / 0.045)) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 40%, transparent 100%);
 }
@@ -98,8 +97,9 @@
   }
 }
 
+/* Movimento reduzido: corta animações, exceto fades de opacidade marcados com data-allow-fade. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *:not([data-allow-fade]), *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

@@ -44,13 +44,13 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,backdrop-filter] duration-300 ${
         solid
-          ? "border-white/[0.06] bg-ink/80 backdrop-blur-xl"
+          ? "border-slate-200/80 bg-white/80 backdrop-blur-xl"
           : "border-transparent bg-transparent"
       }`}
     >
       <a
         href="#conteudo"
-        className="sr-only rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold focus:not-sr-only focus:absolute focus:top-3 focus:left-3"
+        className="sr-only rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:not-sr-only focus:absolute focus:top-3 focus:left-3"
       >
         Pular para o conteúdo
       </a>
@@ -70,12 +70,12 @@ export default function Header() {
                     href={`#${id}`}
                     aria-current={isActive ? "location" : undefined}
                     className={`relative rounded-lg px-4 py-2 text-[15px] font-medium transition-colors duration-200 ${
-                      isActive ? "text-white" : "text-slate-400 hover:text-white"
+                      isActive ? "text-slate-900" : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
                     {label}
                     <span
-                      className={`absolute inset-x-4 -bottom-0.5 h-px bg-blue-400 transition-transform duration-300 ${
+                      className={`absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-blue-600 transition-transform duration-300 ${
                         isActive ? "scale-x-100" : "scale-x-0"
                       }`}
                       aria-hidden="true"
@@ -90,7 +90,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <WhatsAppLink
             message={whatsappMessages.general}
-            className={buttonClass({ size: "sm", className: "max-sm:hidden" })}
+            className={buttonClass({ variant: "outline", size: "sm", className: "max-sm:hidden" })}
           >
             Fale conosco
           </WhatsAppLink>
@@ -102,7 +102,7 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="menu-mobile"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
-            className="flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition-colors hover:bg-white/[0.08] lg:hidden"
+            className="flex size-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-900 transition-colors hover:bg-slate-50 lg:hidden"
           >
             {open ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
           </button>
@@ -120,7 +120,7 @@ export default function Header() {
         <div className="overflow-hidden">
           <Container className="pt-2 pb-6">
             <nav aria-label="Navegação mobile">
-              <ul className="space-y-1 border-t border-white/[0.06] pt-4">
+              <ul className="space-y-1 border-t border-slate-200/80 pt-4">
                 {navLinks.map(({ id, label }) => (
                   <li key={id}>
                     <a
@@ -129,12 +129,12 @@ export default function Header() {
                       aria-current={active === id ? "location" : undefined}
                       className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                         active === id
-                          ? "bg-blue-500/10 text-white"
-                          : "text-slate-300 hover:bg-white/[0.04] hover:text-white"
+                          ? "bg-blue-50 text-slate-900"
+                          : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                       }`}
                     >
                       {label}
-                      {active === id && <span className="size-1.5 rounded-full bg-blue-400" aria-hidden="true" />}
+                      {active === id && <span className="size-1.5 rounded-full bg-blue-600" aria-hidden="true" />}
                     </a>
                   </li>
                 ))}

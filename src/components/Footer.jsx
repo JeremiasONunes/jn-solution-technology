@@ -7,12 +7,12 @@ import Logo from "./Logo";
 import WhatsAppLink from "./WhatsAppLink";
 
 const currentYear = new Date().getFullYear();
-const linkClass = "text-[15px] text-slate-400 transition-colors hover:text-white";
+const linkClass = "text-[15px] text-slate-600 transition-colors hover:text-slate-900";
 
 function FooterColumn({ title, children }) {
   return (
     <div>
-      <h2 className="text-sm font-semibold tracking-wide text-white">{title}</h2>
+      <h2 className="text-sm font-semibold tracking-wide text-slate-900">{title}</h2>
       <ul className="mt-4 space-y-3">{children}</ul>
     </div>
   );
@@ -20,11 +20,11 @@ function FooterColumn({ title, children }) {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-ink-soft">
+    <footer className="border-t border-slate-200/80 bg-white">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1.3fr_1fr] lg:gap-8">
         <div className="max-w-xs">
           <Logo />
-          <p className="mt-5 text-[15px] leading-relaxed text-slate-400">{siteConfig.description}</p>
+          <p className="mt-5 text-[15px] leading-relaxed text-slate-600">{siteConfig.description}</p>
         </div>
 
         <FooterColumn title="Navegação">
@@ -57,26 +57,26 @@ export default function Footer() {
           {siteConfig.email && (
             <li>
               <a href={`mailto:${siteConfig.email}`} className={`${linkClass} inline-flex items-center gap-2`}>
-                <Mail className="size-4 text-blue-400" aria-hidden="true" />
+                <Mail className="size-4 text-blue-600" aria-hidden="true" />
                 {siteConfig.email}
               </a>
             </li>
           )}
           {siteConfig.location && (
-            <li className="inline-flex items-center gap-2 text-[15px] text-slate-400">
-              <MapPin className="size-4 text-blue-400" aria-hidden="true" />
+            <li className="inline-flex items-center gap-2 text-[15px] text-slate-600">
+              <MapPin className="size-4 text-blue-600" aria-hidden="true" />
               {siteConfig.location}
             </li>
           )}
         </FooterColumn>
       </Container>
 
-      <div className="border-t border-white/[0.06]">
-        <Container className="flex flex-col-reverse items-start justify-between gap-4 py-6 pr-24 text-sm text-slate-400 sm:flex-row sm:items-center sm:pr-28">
+      <div className="border-t border-slate-200/80">
+        <Container className="flex flex-col-reverse items-start justify-between gap-4 py-6 pr-24 text-sm text-slate-600 sm:flex-row sm:items-center sm:pr-28">
           <p>
             © {currentYear} {siteConfig.name}. Todos os direitos reservados.
           </p>
-          <a href="#inicio" className="inline-flex items-center gap-1.5 transition-colors hover:text-white">
+          <a href="#inicio" className="inline-flex items-center gap-1.5 transition-colors hover:text-slate-900">
             Voltar ao topo
             <ArrowUp className="size-4" aria-hidden="true" />
           </a>

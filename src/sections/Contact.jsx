@@ -17,7 +17,7 @@ export default function Contact() {
       <Container>
         <Reveal className="relative">
           <GlassGlow className="-top-10 -left-16 size-[24rem]" />
-          <GlassGlow tone="sky" className="-right-16 -bottom-16 size-[20rem]" />
+          <GlassGlow tone="lavender" className="-right-16 -bottom-16 size-[20rem]" />
 
           <div className={`${glassPanel} rounded-3xl px-6 py-12 sm:px-12 sm:py-14 lg:px-14`}>
             <div className="absolute inset-0 -z-10 bg-grid" aria-hidden="true" />
@@ -27,11 +27,11 @@ export default function Contact() {
               <div className="max-w-2xl">
                 <h2
                   id="contato-title"
-                  className="text-3xl leading-tight font-bold tracking-[-0.01em] text-white sm:text-5xl"
+                  className="text-3xl leading-tight font-bold tracking-[-0.01em] text-slate-900 sm:text-5xl"
                 >
                   Sua próxima solução começa com uma conversa.
                 </h2>
-                <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">
+                <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
                   Conte o que você precisa. Vamos entender seu cenário e conversar sobre a melhor
                   solução para você ou sua empresa.
                 </p>
@@ -46,8 +46,8 @@ export default function Contact() {
               </WhatsAppLink>
             </div>
 
-            <div className="mt-12 border-t border-white/[0.08] pt-8">
-              <p id="assuntos" className="text-sm text-slate-400">
+            <div className="mt-12 border-t border-slate-200/80 pt-8">
+              <p id="assuntos" className="text-sm text-slate-600">
                 Prefere ir direto ao assunto?
               </p>
               <ul aria-labelledby="assuntos" className="mt-4 flex flex-wrap gap-2.5">
@@ -55,9 +55,9 @@ export default function Contact() {
                   <li key={id}>
                     <WhatsAppLink
                       message={message}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-slate-200 transition-colors hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-white"
+                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-slate-900"
                     >
-                      <Icon className="size-4 text-blue-300" strokeWidth={1.75} aria-hidden="true" />
+                      <Icon className="size-4 text-blue-600" strokeWidth={1.75} aria-hidden="true" />
                       {title}
                     </WhatsAppLink>
                   </li>
