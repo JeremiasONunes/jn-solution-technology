@@ -1,7 +1,7 @@
 export function LogoMark({ className = "size-9 object-contain" }) {
   return (
     <img
-      src="/jn-logo-mark.png"
+      src="/jn-logo-mark-96.webp"
       alt=""
       className={className}
       aria-hidden="true"

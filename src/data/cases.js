@@ -1,6 +1,8 @@
 import contaQueVai1600 from "../assets/images/case-contaquevai-1600.webp";
+import contaQueVai560 from "../assets/images/case-contaquevai-560.webp";
 import contaQueVai800 from "../assets/images/case-contaquevai-800.webp";
 import restroGestao1600 from "../assets/images/case-restrogestao-1600.webp";
+import restroGestao560 from "../assets/images/case-restrogestao-560.webp";
 import restroGestao800 from "../assets/images/case-restrogestao-800.webp";
 
 /**
@@ -24,7 +26,7 @@ export const cases = [
     displayUrl: "restrogestao.com.br",
     image: {
       src: restroGestao800,
-      srcSet: `${restroGestao800} 800w, ${restroGestao1600} 1600w`,
+      srcSet: `${restroGestao560} 560w, ${restroGestao800} 800w, ${restroGestao1600} 1600w`,
       width: 1600,
       height: 819,
       alt: "Página inicial do RestroGestão com o título “Menos caos, mais controle da operação” e os ganhos para salão, cozinha e gestão",
@@ -47,7 +49,7 @@ export const cases = [
     displayUrl: "conta-que-vai-front.vercel.app",
     image: {
       src: contaQueVai800,
-      srcSet: `${contaQueVai800} 800w, ${contaQueVai1600} 1600w`,
+      srcSet: `${contaQueVai560} 560w, ${contaQueVai800} 800w, ${contaQueVai1600} 1600w`,
       width: 1600,
       height: 819,
       alt: "Página inicial do Conta Que Vai com o título “Matemática que Transforma” e a chamada para o Método ELC®",

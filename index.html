@@ -62,12 +62,15 @@
       }
     </script>
 
-    <!-- Fonte: Roboto (variável, pesos 400–800) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Foto principal (LCP): pré-carregada para não esperar o JavaScript.
+         imagesizes deve ser igual ao atributo sizes do carrossel (Hero.jsx). -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..800&display=swap"
+      rel="preload"
+      as="image"
+      href="/src/assets/images/hero-manutencao-1024.webp"
+      imagesrcset="/src/assets/images/hero-manutencao-480.webp 480w, /src/assets/images/hero-manutencao-640.webp 640w, /src/assets/images/hero-manutencao-1024.webp 1024w"
+      imagesizes="(min-width: 1280px) 27rem, (min-width: 1024px) 36vw, 64vw"
+      fetchpriority="high"
     />
   </head>
   <body>

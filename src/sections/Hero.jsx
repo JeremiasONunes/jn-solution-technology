@@ -72,7 +72,7 @@ export default function Hero() {
           <PhotoStack
             photos={heroPhotos}
             label="Fotos de atendimentos da JN"
-            sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 46vw, calc(88vw - 2.5rem)"
+            sizes="(min-width: 1280px) 27rem, (min-width: 1024px) 36vw, 64vw"
           />
         </Reveal>
       </Container>
