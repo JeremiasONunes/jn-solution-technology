@@ -45,8 +45,12 @@ Em [`index.html`](index.html), há um bloco comentado com `canonical`, `og:url` 
 
 ```text
 public/
-  favicon.svg          monograma JN (provisório)
-  logo.svg             mesmo monograma, para uso externo
+  favicon.ico          escudo JN em 16/32/48px (ícone da aba e do Google)
+  favicon-48.png       escudo JN 48px
+  favicon-96.png       escudo JN 96px
+  apple-touch-icon.png escudo JN 180px com fundo branco (iPhone e logo no JSON-LD)
+  jn-logo-mark.png     escudo JN (usado no header e no chat)
+  jn-logo-shield.png   logo completa (escudo + nome)
 src/
   config/site.js       nome, WhatsApp, mensagens, navegação, getWhatsAppLink()
   data/
